@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--1.vue 引入-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <!--2.定义一个容器，通过id进行标识-->
+    <div id="app">{{message}}</div>
+</body>
+</html>
+<script>
+    //实例化 vue
+    var vm= new Vue(
+        {   // 指定挂载元素
+            el:"#app", //绑定id=app的元素
+            data:{
+                message: "hello world"
+            }
+        }
+    )
+</script>

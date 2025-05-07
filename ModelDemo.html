@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 输入框绑定 msg变量 -->
+        <input type="text" v-model="msg">
+        <!-- 展示msg的值 -->
+        <h2>{{msg}}</h2>
+        <!-- 使用v-html绑定原生的html -->
+        <span v-html="rawHtml"></span>
+        <div>{{ok? 'YES':'NO'}}</div>
+    </div>
+</body>
+</html>
+
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            // 定义声明msg变量
+            msg:'' ,
+            rawHtml: '<span style="color:red">这里是红色</span>',
+            'ok':'1'
+        }
+    })
+</script>
