@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 遍历数组元素-->
+        <div v-for="item in mylist">{{item}}</div>
+        <p>---------</p>
+        <!-- 遍历数组,获取数组元素和索引 -->
+        <li v-for="(num,index) in mylist">
+            {{index}} - {{num}}
+        </li>
+        <p>--------</p>
+        <!-- 迭代对象 -->
+        <li v-for="item of person">
+            {{item}}
+        </li>
+        <p>--------</p>
+       <!-- 迭代对象-提取键值对 -->
+       <li v-for="(key,value) of person">
+        {{key}}-{{value}}
+       </li>
+
+    </div>
+</body>
+</html>
+<script>
+    var vm=new Vue({
+        el:'#app',
+        data:{
+            mylist:[1,2,3],
+            person:{
+                'name':'张三',
+                'age':'18',
+                '性别':'男'
+            }
+        }
+    });
+</script>
